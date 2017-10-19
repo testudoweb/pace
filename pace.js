@@ -266,7 +266,8 @@
     };
 
     Bar.prototype.update = function(prog) {
-      this.progress = prog;
+      if(prog > this.progress)
+        this.progress = prog;
       return this.render();
     };
 
